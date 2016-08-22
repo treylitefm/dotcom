@@ -1,0 +1,47 @@
+
+.container {
+    width: 100%;
+    padding: 0;
+}
+
+.box1, .box2 {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.box1 {
+    background-color: #f4f7f7;
+}
+
+.box1 .inner {
+    background-color: #79a8a9;
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(50% 50%, 0 100%, 100% 100%, 100% 0);
+    shape-outside: polygon( 50% 50%, 0 100%, 100% 100%, 100% 0);
+    transition: all 2s ease;
+}
+
+.box1 .inner:hover, .box1 .inner.hover {
+    -webkit-clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
+    shape-inside: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
+}
+
+.box2 {
+    background-color: #1f4e5f;
+}
+
+.box2 .inner {
+    background-color: #aacfd0;
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(0 0, 50% 50%, 100% 100%, 100% 0);
+    shape-outside: polygon(0 0, 50% 50%, 100% 100%, 100% 0);
+    transition: all 2s ease;
+}
+
+.box2 .inner:hover, .box2 .inner.hover {
+    -webkit-clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
+    shape-outside: polygon(0 0, 0 50%, 100% 50%, 100% 0);
+}
