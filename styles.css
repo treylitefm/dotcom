@@ -2,6 +2,30 @@
     font-family: Calibri;
 }
 
+p {
+    left: 50%;
+    font-size: 2.4em;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 40px;
+    visibility: hidden;
+    transition: visibility 0s, opacity 1.5s linear;
+    opacity: 0;
+    color: gray;
+}
+
+a {
+    color: gray;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #79a8a9;
+}
+
 .container {
     width: 100%;
     min-width: 600px;
@@ -66,46 +90,14 @@
     position: relative;
 }
 
-.box1 .inner {
-    background-color: #79a8a9;
-    width: 100%;
-    height: 100%;
-    -webkit-clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 0);
-    shape-outside: polygon(0 100%, 0 100%, 100% 100%, 100% 0);
-    transition: all 2s ease;
-}
-
-.box1 .inner:hover, .box1 .inner.hover {
-    -webkit-clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
-    shape-inside: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
-}
-
-.box2 {
-    background-color: #1f4e5f;
-}
-
-.box2 .inner {
-    background-color: #aacfd0;
-    width: 100%;
-    height: 100%;
-    -webkit-clip-path: polygon(0 0, 0 0, 100% 100%, 100% 0);
-    shape-outside: polygon(0 0, 0 0, 100% 100%, 100% 0);
-    transition: all 2s ease;
-}
-
-.box2 .inner:hover, .box2 .inner.hover {
-    -webkit-clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
-    shape-outside: polygon(0 0, 0 50%, 100% 50%, 100% 0);
-}
-
-.content {
+.box1 .top {
     left: 7%;
     top: 20%;
     transition: all 1s ease;
     position: absolute;
 }
 
-.content .image {
+.box1 .top .image {
     height: 33vh;
     width: 33vh;
     background-image: url(prince.jpg);
@@ -118,31 +110,78 @@
     display: inline-block;
 }
 
-.content.hover {
+.box1 .top.hover {
     left: 7%;
     top: 11%;
 }
-.content.hover .image {
+
+.box1 .top.hover .image {
     border-radius: 25px;
     height: 33vh;
     width: 33vh;
     background-size: 100%;
 }
 
-.content.hover p {
+.box1 .top.hover p {
     visibility: visible;
     opacity: 1;
 }
 
-p {
-    left: 50%;
-    font-size: 2.4em;
-    vertical-align: top;
-    display: inline-block;
-    margin-top: 10%;
-    margin-left: 40px;
-    visibility: hidden;
-    transition: visibility 0s, opacity 1.5s linear;
-    opacity: 0;
+.box1 .bottom {
+    position: absolute;
+    background-color: #79a8a9;
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 0);
+    shape-outside: polygon(0 100%, 0 100%, 100% 100%, 100% 0);
+    transition: all 2s ease;
 }
 
+.box1 .bottom:hover, .box1 .bottom.hover {
+    -webkit-clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
+    shape-outside: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
+}
+
+.box1 .bottom .image {
+    height: 15vh;
+    width: 15vh;
+    background-image: url(prince.jpg);
+    background-size: 100%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: gray;
+    border-radius: 200px;
+    display: inline-block;
+    position: absolute;
+    transition: all 1.5s ease-in-out;
+    top: 58%;
+    left: 7%;
+}
+
+.box1 .bottom:hover .image, .box1 .bottom.hover .image {
+    height: 33vh;
+    width: 33vh;
+    border-radius: 25px;
+    background-size: 100%;
+    display: inline-block;
+    top: 58%;
+    left: 7%;
+}
+
+.box2 {
+    background-color: #1f4e5f;
+}
+
+.box2 .bottom {
+    background-color: #aacfd0;
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(0 0, 0 0, 100% 100%, 100% 0);
+    shape-outside: polygon(0 0, 0 0, 100% 100%, 100% 0);
+    transition: all 2s ease;
+}
+
+.box2 .bottom:hover, .box2 .bottom.hover {
+    -webkit-clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
+    shape-outside: polygon(0 0, 0 50%, 100% 50%, 100% 0);
+}
