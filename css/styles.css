@@ -53,7 +53,7 @@ body {
 .header .logo {
     height: 51px;
     width: 200px;
-    background-image: url(/img/logo.png);
+    background-image: url(https://dl.dropboxusercontent.com/u/52673082/logo.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
