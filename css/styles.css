@@ -23,7 +23,7 @@ a {
     transition: opacity 1.5s,color .5s linear;
 }
 
-a:hover {
+a.kendrick:hover {
     color: white;
     transition: .5s linear;
 }
@@ -58,7 +58,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.header a.link {
+.header .link {
     vertical-align: top;
     font-size: 1.1em;
     color: black;
@@ -67,6 +67,9 @@ body {
     margin-left: 12px;
     text-decoration: none;
     text-transform: uppercase;
+    transition: 0.5s;
+}
+.header .projects {
     transition: 0.5s;
 }
 
@@ -83,7 +86,7 @@ body {
     color: #f4f7f7;
 }
 
-.header a.link:hover {
+.header a.link:hover, .header a:hover {
     color: #79a8a9;
 }
 

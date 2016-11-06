@@ -1,6 +1,7 @@
 (function() {
     angular.module('app').controller('MainController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-        if ($location.url() == '/') {
+        console.log($location.url())
+        if ($location.url() == '/' || $location.url() == '') {
             $scope.hover = false
             $scope.home = true 
         } else {
