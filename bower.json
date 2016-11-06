@@ -1,0 +1,23 @@
+{
+  "name": "dotcom",
+  "homepage": "https://github.com/treylitefm/dotcom",
+  "authors": [
+    "Omar Griffin <treylitefm@Omars-MacBook-Air.local>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "angular-animate": "^1.5.8"
+  }
+}

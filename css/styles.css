@@ -4,31 +4,39 @@
 
 p {
     left: 50%;
-    font-size: 2.4em;
+    font-size: 2.1em;
+    width: 60%;
     vertical-align: top;
     display: inline-block;
     margin-top: 10%;
     margin-left: 40px;
     visibility: hidden;
-    transition: visibility 0s, opacity 1.5s linear;
+    transition: visibility 1.5s, opacity 1.5s linear;
     opacity: 0;
-    color: gray;
+    color: black;
 }
 
 a {
-    color: gray;
+    color: black;
     text-transform: uppercase;
     text-decoration: none!important;
-    transition: 0.5s;
+    transition: opacity 1.5s,color .5s linear;
 }
 
 a:hover {
-    color: #79a8a9;
+    color: white;
+    transition: .5s linear;
+}
+
+body {
+    min-width: 1000px;
+    width: auto !important;
+    width: 1000px;
 }
 
 .container {
     width: 100%;
-    min-width: 600px;
+    min-width: 800px;
     padding: 0;
 }
 
@@ -45,7 +53,7 @@ a:hover {
 .header .logo {
     height: 51px;
     width: 200px;
-    background-image: url(logo.png);
+    background-image: url(/img/logo.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -53,7 +61,7 @@ a:hover {
 .header a.link {
     vertical-align: top;
     font-size: 1.1em;
-    color: gray;
+    color: black;
     margin-top: 6px;
     padding: 8px 12px 8px 12px;
     margin-left: 12px;
@@ -112,7 +120,7 @@ a:hover {
 .box1 .top .image, .box3 .top .image {
     height: 33vh;
     width: 33vh;
-    background-image: url(prince.jpg);
+    background-image: url(/img/img_3021.jpg);
     background-size: 100%;
     border-style: solid;
     border-width: 3px;
@@ -174,8 +182,9 @@ a:hover {
 .box1 .bottom .image {
     height: 15vh;
     width: 15vh;
-    background-image: url(prince.jpg);
-    background-size: 100%;
+    background-image: url(/img/img_2478.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     border-style: solid;
     border-width: 3px;
     border-color: gray;
@@ -188,7 +197,7 @@ a:hover {
 }
 
 .box3 .bottom .image {
-    background-image: url(prince.jpg);
+    background-image: url(/img/img_2478.png);
     background-size: 100%;
     border-style: solid;
     border-width: 3px;
@@ -203,7 +212,7 @@ a:hover {
     height: 33vh;
     width: 33vh;
     border-radius: 25px;
-    background-size: 100%;
+    background-size: cover;
     display: inline-block;
     top: 58%;
     left: 7%;
@@ -228,7 +237,7 @@ a:hover {
     height: 33vh;
     width: 33vh;
     display: inline-block;
-    background-image: url(prince.jpg);
+    background-image: url(/img/img_3021.jpg);
     background-size: 100%;
     border-style: solid;
     border-width: 3px;
@@ -270,4 +279,19 @@ a:hover {
 .box2 .bottom.hover .image {
     left: 7%;
     top: 8%;
+}
+
+.home-stuff.ng-hide {
+    opacity: 0 !important;
+}
+
+div > .home-stuff.ng-hide-add, div > .home-stuff.ng-hide-remove {
+    transition: opacity 1s linear;
+}
+
+iframe {
+    position: absolute;
+    border-width: 0;
+    left: 0;
+    top: 200px;
 }

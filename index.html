@@ -1,53 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="">
         <link rel="icon" href="favicon.png">
-        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-
-        <script src="jquery.min.js"></script>
-        <script src="bootstrap.min.js"></script>
-        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/MainController.js"></script>
         <title>TreyLiteFM</title>
     </head>
     <body>
-        <div class="container">
-            <div class="box1 row">
+        <div class="container" ng-controller="MainController">
+            <div class="box1 row" 
+                ng-mouseenter="hover=true"
+                ng-mouseleave="hover = home ? false : true">
                 <div class="header">
-                    <a href="#"><div class="logo"></div></a>
-                    <a class="link" href="#">Projects</a>
+                    <a href="#/" ng-click="goHome()"><div class="logo"></div></a>
+                    <a class="link" href="#/pacman" ng-click="goPacman()">Pacman</a>
                     <a class="link" href="https://github.com/treylitefm">Github</a>
-                    <a class="link" href="#">Gallery</a>
                     <a class="link" href="https://instagram.com/treylitefm">Instagram</a>
                     <a class="link" href="https://linkedin.com/in/omarkgriffin">LinkedIn</a>
                 </div>
-                <div class="top">
-                    <div class="image"></div>
-                    <p>I Build Things. I Break Things. And I Climb Things.<br>My Spirit Animal is <a href="https://en.wikipedia.org/wiki/Kendrick_Lamar">Kendrick Lamar.</a></p>
+                <div class="bottom"
+                    ng-class="{hover: hover}">
+                    <div class="image home-stuff ng-hide" ng-show="home"></div>
                 </div>
-                <div class="bottom">
-                    <div class="image"></div>
-                    <p>Builder+Breaker. Climber. Hip-Hop Enthusiast. Amateur Mathematician.</p>
-                </div>
-            </div>
-            <div class="box2 row">
-                <div class="top">
-                    <div class="image"></div>
-                </div>
-                <div class="bottom">
-                    <div class="image"></div>
-                </div>
-            </div>
-            <div class="box3 row">
-                <div class="top">
-                    <div class="image"></div>
-                </div>
-                <div class="bottom">
-                    <div class="image"></div>
+                <div class="top" ng-class="{hover: hover}">
+                    <div class="home-stuff image ng-hide" ng-show="home"></div>
+                    <p class="description home-stuff ng-hide" ng-show="home">Some Call Me Omar. Others Call Me Awesome. Either Way, Welcome. <br><br>A Little About Me:<br>I Am A Quality Driven Full Stack Software Engineer.<br>So In A Nutshell, I Build Things and I Break Things. <br><br>I Also Happen To Climb Things.<br>My Spirit Animal is <a href="https://en.wikipedia.org/wiki/Kendrick_Lamar">Kendrick Lamar.</a></p>
                 </div>
             </div>
         </div>
+            <div class="view" ng-view=""></div>
+
     </body>
 </html>
