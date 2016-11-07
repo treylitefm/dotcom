@@ -4,7 +4,7 @@
 
 p {
     left: 50%;
-    font-size: 2em;
+    font-size: 2.2em;
     width: 60%;
     vertical-align: top;
     display: inline-block;
@@ -123,6 +123,8 @@ body {
 .box1 .top .image, .box3 .top .image {
     height: 33vh;
     width: 33vh;
+    max-height: 300px;
+    max-width: 300px;
     background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_3021.jpg);
     background-size: 100%;
     border-style: solid;
@@ -146,6 +148,8 @@ body {
     border-radius: 25px;
     height: 33vh;
     width: 33vh;
+    max-height: 300px;
+    max-width: 300px;
     background-size: 100%;
 }
 
@@ -185,6 +189,8 @@ body {
 .box1 .bottom .image {
     height: 15vh;
     width: 15vh;
+    max-height: 300px;
+    max-width: 300px;
     background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_2478.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -214,6 +220,8 @@ body {
 .box1 .bottom:hover .image, .box1 .bottom.hover .image {
     height: 33vh;
     width: 33vh;
+    max-height: 300px;
+    max-width: 300px;
     border-radius: 25px;
     background-size: cover;
     display: inline-block;
