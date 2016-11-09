@@ -3,17 +3,20 @@
 }
 
 p {
-    left: 50%;
-    font-size: 2.2em;
-    width: 60%;
+    position: relative;
+    font-size: 1.5em;
+    left: 5%;
+    top: 15px;
     vertical-align: top;
     display: inline-block;
-    margin-top: 10%;
-    margin-left: 40px;
     visibility: hidden;
     transition: visibility 1.5s, opacity 1.5s linear;
     opacity: 0;
     color: black;
+}
+
+.top .wrapper {
+    position: relative;
 }
 
 a {
@@ -24,7 +27,7 @@ a {
 }
 
 a.kendrick:hover {
-    color: white;
+    color: #79a8a9;
     transition: .5s linear;
 }
 
@@ -125,7 +128,7 @@ body {
     width: 33vh;
     max-height: 300px;
     max-width: 300px;
-    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_3021.jpg);
+    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_3022.jpg);
     background-size: 100%;
     border-style: solid;
     border-width: 3px;
@@ -191,7 +194,6 @@ body {
     width: 15vh;
     max-height: 300px;
     max-width: 300px;
-    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_2478.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-style: solid;
@@ -205,18 +207,6 @@ body {
     left: 7%;
 }
 
-.box3 .bottom .image {
-    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_2478.png);
-    background-size: 100%;
-    border-style: solid;
-    border-width: 3px;
-    border-color: gray;
-    border-radius: 200px;
-    display: inline-block;
-    position: absolute;
-    transition: all 1.5s ease-in-out;
-}
-
 .box1 .bottom:hover .image, .box1 .bottom.hover .image {
     height: 33vh;
     width: 33vh;
@@ -227,6 +217,25 @@ body {
     display: inline-block;
     top: 58%;
     left: 7%;
+}
+
+
+.box1 .bottom:hover .image.image0, .box1 .bottom.hover .image.image0 {
+    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_2478.png);
+    top: 58%;
+    left: 7%;
+}
+
+.box1 .bottom:hover .image.image1, .box1 .bottom.hover .image.image1 {
+    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_2741.jpg);
+    top: 58%;
+    left: 37%;
+}
+
+.box1 .bottom:hover .image.image2, .box1 .bottom.hover .image.image2 {
+    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_2922.jpg);
+    top: 58%;
+    left: 67%;
 }
 
 .box3 .bottom:hover .image, .box3 .bottom.hover .image {
@@ -248,7 +257,7 @@ body {
     height: 33vh;
     width: 33vh;
     display: inline-block;
-    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_3021.jpg);
+    background-image: url(https://dl.dropboxusercontent.com/u/52673082/img_3022.jpg);
     background-size: 100%;
     border-style: solid;
     border-width: 3px;
